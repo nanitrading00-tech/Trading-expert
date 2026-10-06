@@ -8,10 +8,10 @@ export const site = {
   logo: "/images/logo.png",
   freeTrial: "1-Day Free Trial",
 
-  phone: "+91 95538 36864",
+  phone: "+91 95538 12345",
   // Country code + number, digits only. Used by the WhatsApp chat button and icons.
   whatsapp: "919553836864",
-  email: "niftyexperts@gmail.com",
+  email: "sample@gmail.com",
   // Also used to place the pin on the Contact Us page map.
   address: "Millennium Business Park, MIDC Industrial Area, Mahape Road, Mumbai, Maharashtra 400555",
 
