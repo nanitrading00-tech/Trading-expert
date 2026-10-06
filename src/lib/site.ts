@@ -8,10 +8,10 @@ export const site = {
   logo: "/images/logo.png",
   freeTrial: "1-Day Free Trial",
 
-  phone: "+91 95538 12345",
+  phone: "+91 95538 36864",
   // Country code + number, digits only. Used by the WhatsApp chat button and icons.
   whatsapp: "919553836864",
-  email: "sample@gmail.com",
+  email: "neftyexperts@gmail.com",
   // Also used to place the pin on the Contact Us page map.
   address: "Millennium Business Park, MIDC Industrial Area, Mahape Road, Mumbai, Maharashtra 400555",
 
@@ -40,8 +40,8 @@ export const site = {
 // Monthly price in ₹ (before GST) and an optional "Pay now" link for each package. Paste a Razorpay
 // (or other) payment link and the button appears; leave it empty to hide it. Names and features are in content.ts.
 export const packages = {
-  "equity-cash-12000": { price: "12,000", paymentLink: "" },
-  "intraday-18000": { price: "18,000", paymentLink: "" },
+  "equity-cash-12000": { price: "15,000", paymentLink: "" },
+  "intraday-18000": { price: "20,000", paymentLink: "" },
   "equity-cash-25000": { price: "25,000", paymentLink: "" },
   "option-intraday-equity-35000": { price: "35,000", paymentLink: "" },
   "premium-option-75000": { price: "75,000", paymentLink: "" },
