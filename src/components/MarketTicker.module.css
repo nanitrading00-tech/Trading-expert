@@ -1,0 +1,91 @@
+.ticker {
+  display: flex;
+  align-items: stretch;
+  height: 36px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(5, 7, 13, 0.9);
+  font-size: 13px;
+  overflow: hidden;
+}
+
+.status {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 16px;
+  border-right: 1px solid var(--border);
+  background: var(--bg-soft);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.viewport {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 50s linear infinite;
+}
+
+.ticker:hover .track {
+  animation-play-state: paused;
+}
+
+.group {
+  display: flex;
+  justify-content: space-around;
+  min-width: 100vw;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-inline: 28px;
+  border-right: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.name {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.price {
+  color: #fff;
+  font-weight: 600;
+}
+
+.message {
+  padding-inline: 16px;
+  color: var(--muted);
+}
+
+@keyframes ticker-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+
+  .viewport {
+    overflow-x: auto;
+  }
+}

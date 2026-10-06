@@ -1,0 +1,73 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.field:nth-of-type(n + 3) {
+  grid-column: 1 / -1;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  resize: vertical;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field textarea {
+  min-height: 88px;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #64748b;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(37, 206, 56, 0.2);
+}
+
+.submit {
+  grid-column: 1 / -1;
+  justify-self: start;
+  padding: 12px 28px;
+}
+
+.honeypot {
+  display: none;
+}
+
+.success,
+.error {
+  grid-column: 1 / -1;
+  font-size: 14px;
+}
+
+.success {
+  color: var(--green-bright);
+}
+
+.error {
+  color: var(--red);
+}

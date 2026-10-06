@@ -1,0 +1,99 @@
+.card {
+  width: 100%;
+  max-width: 440px;
+  padding: 28px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.subtitle {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.subtitle strong {
+  color: #fff;
+}
+
+.form {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.label {
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.required {
+  margin-left: 2px;
+  color: var(--green-bright);
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 15px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field input::placeholder {
+  color: #64748b;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(37, 206, 56, 0.2);
+}
+
+.field option {
+  background: var(--bg-soft);
+}
+
+.submit {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.honeypot {
+  display: none;
+}
+
+.success,
+.error {
+  text-align: center;
+  font-size: 14px;
+}
+
+.success {
+  color: var(--green-bright);
+}
+
+.error {
+  color: var(--red);
+}
+
+@media (max-width: 520px) {
+  .card {
+    padding: 22px 18px;
+  }
+}

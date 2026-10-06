@@ -1,0 +1,55 @@
+.button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  font-size: 30px;
+  box-shadow: 0 12px 30px -8px rgba(37, 211, 102, 0.7);
+  transition: transform 0.2s ease;
+}
+
+.button:hover {
+  transform: scale(1.08);
+}
+
+/* Soft pulsing ring */
+.button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+  animation: ring 2.4s ease-out infinite;
+}
+
+@keyframes ring {
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@media (max-width: 520px) {
+  .button {
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+    font-size: 26px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button::after {
+    animation: none;
+  }
+}

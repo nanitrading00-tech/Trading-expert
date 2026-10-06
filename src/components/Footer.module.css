@@ -1,0 +1,149 @@
+.footer {
+  position: relative;
+  padding-top: 72px;
+  border-top: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(10, 15, 28, 0.7), #03050a);
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* Glowing accent line on the top edge */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  width: min(640px, 80%);
+  height: 1px;
+  transform: translateX(-50%);
+  background: var(--gradient);
+  box-shadow: 0 0 24px 2px rgba(37, 206, 56, 0.5);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.7fr 1fr 1.4fr;
+  gap: 40px;
+}
+
+.brand img {
+  width: 180px;
+  height: auto;
+}
+
+.quote {
+  margin-top: 16px;
+  font-style: italic;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social a {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: #fff;
+  font-size: 17px;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+}
+
+.social a:hover {
+  transform: translateY(-2px);
+  border-color: var(--green);
+  box-shadow: 0 0 18px rgba(37, 206, 56, 0.45);
+  color: var(--green-bright);
+}
+
+.heading {
+  margin-bottom: 16px;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.list a {
+  transition: color 0.2s ease;
+}
+
+.list a:hover {
+  color: #fff;
+}
+
+.contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact svg {
+  flex: none;
+  margin-top: 4px;
+  color: var(--green-bright);
+}
+
+.disclaimer {
+  margin-top: 56px;
+  padding-block: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.disclaimer p + p {
+  margin-top: 4px;
+  color: #cbd5e1;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  padding-block: 20px 28px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.bottom a {
+  color: #cbd5e1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding-top: 56px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* The Contact page and the Free Trial popup cover enquiries on phones. */
+  .touch {
+    display: none;
+  }
+}

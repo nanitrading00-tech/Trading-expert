@@ -1,0 +1,53 @@
+.banner {
+  position: relative;
+  isolation: isolate;
+  padding-block: 96px 80px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.image {
+  z-index: -2;
+  object-fit: cover;
+  opacity: 0.25;
+  filter: saturate(0.6);
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(640px 320px at 50% 0%, rgba(37, 206, 56, 0.2), transparent 70%),
+    linear-gradient(180deg, rgba(5, 7, 13, 0.35), var(--bg));
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 18px;
+  font-size: clamp(36px, 6vw, 64px);
+}
+
+.subtitle {
+  max-width: 640px;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+@media (max-width: 920px) {
+  .banner {
+    padding-block: 64px 56px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}

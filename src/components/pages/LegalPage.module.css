@@ -1,0 +1,48 @@
+.content {
+  max-width: 900px;
+  padding: 48px;
+  color: #cbd5e1;
+}
+
+.updated {
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.content h2 {
+  margin-block: 36px 12px;
+  font-size: 22px;
+}
+
+.content > :first-child h2 {
+  margin-top: 0;
+}
+
+.content ul {
+  display: grid;
+  gap: 10px;
+  padding-left: 22px;
+}
+
+.content li::marker {
+  color: var(--green-bright);
+}
+
+.content a {
+  color: var(--green-bright);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.seeAlso {
+  margin-top: 36px;
+}
+
+@media (max-width: 920px) {
+  .content {
+    padding: 28px 20px;
+  }
+}
